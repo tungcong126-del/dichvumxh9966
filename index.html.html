@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dịch vụ mạng xã hội 9966</title>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+*{box-sizing:border-box;font-family:Arial}
+body{
+  margin:0;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  padding:20px;
+}
+
+.container{
+  max-width:950px;
+  margin:auto;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+h1{
+  text-align:center;
+  color:#ffd700;
+  font-size:28px;
+}
+
+/* tích xanh */
+.verify{
+  color:#1da1f2;
+  font-size:22px;
+  margin-left:6px;
+}
+
+/* grid dịch vụ */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:10px;
+  margin:20px 0;
+}
+
+.service-item{
+  background:rgba(255,255,255,0.08);
+  padding:10px;
+  border-radius:10px;
+}
+
+/* form */
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:10px;
+  border:none;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  margin-top:10px;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+.total{
+  margin-top:10px;
+  font-weight:bold;
+  color:#ffd166;
+  text-align:center;
+  font-size:18px;
+}
+
+/* banking */
+.bank-box{
+  margin-top:25px;
+  text-align:center;
+  background:rgba(255,255,255,0.06);
+  padding:15px;
+  border-radius:15px;
+}
+
+.qr{
+  width:220px;
+  margin-top:10px;
+  border-radius:12px;
+}
+
+.copy-btn{
+  padding:6px 12px;
+  margin-left:6px;
+  font-size:13px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+🚀 DỊCH VỤ MẠNG XÃ HỘI 9966
+<span class="verify">✔</span>
+</h1>
+
+<!-- ===== DANH SÁCH ===== -->
+<div class="services">
+<div class="service-item">✔ Tăng Follow TikTok</div>
+<div class="service-item">✔ Tăng Like / Tim / View</div>
+<div class="service-item">✔ Tăng Follow Facebook</div>
+<div class="service-item">✔ Tăng Sub YouTube</div>
+<div class="service-item">✔ Thiết kế Website</div>
+<div class="service-item">✔ Làm App Android</div>
+<div class="service-item">✔ Viết Bot tự động</div>
+<div class="service-item">✔ Tool theo yêu cầu</div>
+<div class="service-item">✔ Fix lỗi website/app</div>
+<div class="service-item">✔ Cài phần mềm</div>
+<div class="service-item">✔ Tối ưu máy tính</div>
+<div class="service-item">✔ Nhận mọi dịch vụ CNTT</div>
+</div>
+
+<h2>📩 Đặt dịch vụ</h2>
+
+<input id="name" placeholder="Họ và tên">
+<input id="phone" placeholder="Số điện thoại">
+<input id="zalo" placeholder="Link/Zalo của bạn">
+
+<label>Chọn dịch vụ</label>
+<select id="service">
+<option value="" data-price="0">-- Chọn dịch vụ --</option>
+
+<option data-price="50">Tăng Follow TikTok</option>
+<option data-price="15">Tăng Tim TikTok</option>
+<option data-price="10">Tăng View TikTok</option>
+<option data-price="285">Nạp Xu TikTok</option>
+
+<option data-price="70">Tăng Follow Facebook</option>
+<option data-price="25">Tăng Like Facebook</option>
+<option data-price="30">Tăng Comment Facebook</option>
+
+<option data-price="120">Tăng Sub YouTube</option>
+
+<option data-price="500000">Thiết kế Website</option>
+<option data-price="800000">Làm App Android</option>
+<option data-price="600000">Viết Bot tự động</option>
+<option data-price="300000">Tool theo yêu cầu</option>
+<option data-price="200000">Fix lỗi website/app</option>
+<option data-price="150000">Cài đặt phần mềm</option>
+<option data-price="100000">Tối ưu máy tính</option>
+<option data-price="0">Tư vấn CNTT (miễn phí)</option>
+</select>
+
+<input id="qty" type="number" value="1" min="1" placeholder="Số lượng">
+
+<div class="total">💰 Tổng tiền: <span id="total">0</span> đ</div>
+
+<textarea id="note" rows="4" placeholder="Mô tả yêu cầu..."></textarea>
+
+<button onclick="datHang()">🚀 ĐẶT DỊCH VỤ NGAY</button>
+
+<!-- ===== BANK ===== -->
+<div class="bank-box">
+<h3>🏦 Thanh toán VietinBank</h3>
+
+<p><b>Ngân hàng:</b> VietinBank</p>
+<p><b>Chủ TK:</b> NGUYEN TRAN CONG TUNG</p>
+
+<p>
+<b>Số TK:</b>
+<span id="stk">0776682347</span>
+<button class="copy-btn" onclick="copySTK()">Copy</button>
+</p>
+
+<img class="qr"
+src="https://img.vietqr.io/image/vietinbank-0776682347-compact.png?amount=0&addInfo=MXH9966&accountName=NGUYEN%20TRAN%20CONG%20TUNG">
+</div>
+
+<!-- ===== LIÊN HỆ ===== -->
+<div style="margin-top:25px;background:rgba(255,255,255,0.06);padding:18px;border-radius:15px;text-align:center;">
+<h3>📞 Liên hệ Dịch vụ mạng xã hội 9966</h3>
+
+<p>📘 Facebook:
+<a href="https://www.facebook.com/share/1DpmLHrwik/" target="_blank" style="color:#4dabff">Xem Facebook</a>
+</p>
+
+<p>💬 Zalo:
+<a href="https://zalo.me/84776682347" target="_blank" style="color:#00e676">Chat Zalo</a>
+</p>
+
+<p>🎵 TikTok:
+<a href="https://www.tiktok.com/@enigma2409990?_r=1&_t=ZS-93xXW1qYiz1" target="_blank" style="color:#ff4d6d">Xem TikTok</a>
+</p>
+
+<p style="color:#ffd166">⚡ Hỗ trợ nhanh — nhận mọi dịch vụ CNTT</p>
+</div>
+
+</div>
+
+<script>
+// ===== EMAILJS INIT =====
+(function(){
+  emailjs.init("RW4GSxNj9V6A9t94_"); // ⚠️ thay key
+})();
+
+// ===== TÍNH TIỀN =====
+const service=document.getElementById("service");
+const qty=document.getElementById("qty");
+const totalEl=document.getElementById("total");
+
+function calc(){
+  let price=service.options[service.selectedIndex].dataset.price || 0;
+  let total=price*qty.value;
+  totalEl.innerText=total.toLocaleString();
+}
+service.onchange=calc;
+qty.oninput=calc;
+
+// ===== COPY STK =====
+function copySTK(){
+  navigator.clipboard.writeText("0776682347");
+  alert("✅ Đã copy số tài khoản!");
+}
+
+// ===== ĐẶT HÀNG =====
+function datHang(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let zalo=document.getElementById("zalo").value;
+let serviceName=service.value;
+let note=document.getElementById("note").value;
+let total=totalEl.innerText;
+
+if(!name || !phone){
+  alert("⚠️ Vui lòng nhập đủ thông tin");
+  return;
+}
+
+emailjs.send("service_iaf7r7d","template_a16ncbc",{
+from_name:name,
+phone:phone,
+zalo:zalo,
+service:serviceName,
+note:note,
+total:total,
+to_email:"tungcong126@gmail.com"
+});
+
+window.open("https://zalo.me/84776682347","_blank");
+
+alert("✅ Đã gửi yêu cầu! Kiểm tra Zalo để được hỗ trợ.");
+}
+</script>
+
+</body>
+</html>
+
+
+
